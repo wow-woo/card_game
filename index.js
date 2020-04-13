@@ -131,7 +131,10 @@ const checkForMatch = () => {
 };
 
 function flipCard() {
-  if (this.getAttribute("data-count") === "false") {
+  if (
+    this.getAttribute("data-count") === "false" &&
+    chosenCard_name.length !== 2
+  ) {
     this.setAttribute("data-count", true);
 
     const card_id = this.getAttribute("data-id");
